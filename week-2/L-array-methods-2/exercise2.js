@@ -7,7 +7,11 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+function capitalise(str) {
+  var temp = str.split("");
+  temp[0] = temp[0].toUpperCase();
+  return temp.join("");
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
