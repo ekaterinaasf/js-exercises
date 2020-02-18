@@ -5,8 +5,11 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  var newArr = arr;
+  newArr[index] = value;
+  return newArr; // complete this statement
 }
+///Why it returns not old, but new array for both actions???
 
 /* 
   DO NOT EDIT BELOW THIS LINE

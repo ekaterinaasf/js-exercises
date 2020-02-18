@@ -6,8 +6,30 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  return int(num) && flt(num) && eql(excludedNums, num);
+}
 
+function int(num) {
+  return typeof num === "number";
+}
+
+function flt(num) {
+  return Number.isInteger(num);
+}
+function eql(arr, num) {
+  var k = 0;
+  for (i in arr) {
+    if (arr[i] === num) {
+      k++;
+    }
+    if (k > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
 console.log(validate(6));
 console.log(validate(10.5));
 console.log(validate(101));

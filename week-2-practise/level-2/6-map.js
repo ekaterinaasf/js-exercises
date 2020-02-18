@@ -4,6 +4,16 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
+var percentagesFormatted = [];
+
+function formater(arr) {
+  for (i in arr) {
+    percentagesFormatted[i] = arr[i] + "%";
+  }
+  return arr;
+}
+
+formater(percentages);
 
 console.log(percentagesFormatted);
 
