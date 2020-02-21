@@ -44,5 +44,60 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+//Level1
+function level1(arg) {
+  if (
+    arg.length >= 5 &&
+    arg.match(/[A-Z]+/) &&
+    arg.match(/[0-9]+/) &&
+    arg.match(/[a-z]+/)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+var PasswordValidationResult = password.map(level1);
+console.log(PasswordValidationResult);
 
-console.log(PasswordValidationResult)
+//Level2
+function level2(arg) {
+  if (
+    arg.length >= 5 &&
+    arg.match(/[A-Z]+/) &&
+    arg.match(/[0-9]+/) &&
+    arg.match(/[a-z]+/) &&
+    arg.match(/[!#$%.]+/)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+var PasswordValidationResult = password.map(level2);
+console.log(PasswordValidationResult);
+
+//Level3
+PreviousPassword = [
+  "fhD8!yrjj",
+  "ttkTu.wer3",
+  "dvyyeyY!5",
+  "qwbfj76%",
+  "tytT3729."
+];
+function level3(arg) {
+  if (
+    arg.length >= 5 &&
+    arg.match(/[A-Z]+/) &&
+    arg.match(/[0-9]+/) &&
+    arg.match(/[a-z]+/) &&
+    arg.match(/[!#$%.]+/) &&
+    !PreviousPassword.some(a => a === arg)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+var PasswordValidationResult = password.map(level3);
+console.log(PasswordValidationResult);
