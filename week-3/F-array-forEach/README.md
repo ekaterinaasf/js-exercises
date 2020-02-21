@@ -8,9 +8,9 @@ When functions meet this criteria they can be called _pure functions_.
 
 A pure function does not:
 
-* access any data unless it was passed in as a parameter
-* change data declared outside the function
-* interacts with anything outside of the function (e.g. logs a message to the console, shows a message on a website, saves data to disk)
+- access any data unless it was passed in as a parameter
+- change data declared outside the function
+- interacts with anything outside of the function (e.g. logs a message to the console, shows a message on a website, saves data to disk)
 
 These are all example of _side effects_. Of course, from time to time, we will need to perform side effects, but we should try to avoid side effects inside of functions and only have them when absolutely necessary.
 
@@ -32,7 +32,7 @@ names.forEach(function(name, index) {
 
 This logs each name to the console as hoped, but we notice that the names are not formatted correctly. You might be tempted to format the name inside of the `forEach` function.
 
-However, it is good practise to write small functions with a single responsibility. So instead, we can write a `formatName` function (which we can re-use in other places) and pass it to `.map()` before calling `.forEach()`.
+However, it is good practice to write small functions with a single responsibility. So instead, we can write a `formatName` function (which we can re-use in other places) and pass it to `.map()` before calling `.forEach()`.
 
 ```js
 function formatName(name) {
